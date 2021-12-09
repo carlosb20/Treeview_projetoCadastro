@@ -216,7 +216,7 @@ class ProjetoCadastro(Tk):
         self.botao.configure(font='Calibri 15 bold')
         self.botao.place(relx=0.01,rely=0.91)
 
-        self.sair = Button(self,text='SAIR',command=self.quit)
+        self.sair = Button(self,text='SAIR',command=self.sair)
         self.sair.configure(width=20)
         self.sair.configure(bg='green')
         self.sair.configure(fg='white')
@@ -253,6 +253,11 @@ class ProjetoCadastro(Tk):
         self.pes.configure(bd=4)
         self.pes.configure(font='Calibri 15 bold')
         self.pes.place(relx=0.80,rely=0.20)
+
+    def sair(self):
+        v = messagebox.askyesno('','deseja sair')
+        if v == True:
+            self.quit()
 
 
     def funcao(self):
@@ -305,6 +310,6 @@ if __name__== "__main__":
     root['bg'] = 'navy'
     root.iconbitmap('usuario.ico')
     root.attributes('-fullscreen',True)
-    root.overrideredirect(True)
+    #root.overrideredirect(True)
     root.mainloop()
 
