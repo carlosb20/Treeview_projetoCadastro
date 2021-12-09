@@ -310,6 +310,6 @@ if __name__== "__main__":
     root['bg'] = 'navy'
     root.iconbitmap('usuario.ico')
     root.attributes('-fullscreen',True)
-    #root.overrideredirect(True)
+    root.overrideredirect(True)
     root.mainloop()
 
